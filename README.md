@@ -1,73 +1,126 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio web application built with React, TypeScript, and Vite. The application showcases projects, skills, and experience with a clean and interactive user interface.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **State/Data Management**: [TanStack React Query](https://tanstack.com/query/latest)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Linting**: ESLint with TypeScript hooks
 
-## React Compiler
+## 🏗️ Architecture & Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The project follows a component-based architecture where the UI is broken down into reusable components and distinct page views. The application is wrapped with global providers (React Router, React Query) at the entry point.
 
-## Expanding the ESLint configuration
+### Application Architecture Diagram
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```mermaid
+graph TD
+    subgraph Global Architecture
+        A[index.html] --> B[main.tsx: Entry Point]
+        B -->|Wraps with Provider| C[QueryClientProvider]
+        C -->|Wraps with Router| D[BrowserRouter]
+        D --> E[App.tsx: App Entry]
+    end
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    subgraph Routing & Layout
+        E -->|Routes| F[Layout.tsx]
+        F --> G[Sidebar / Navigation]
+        F --> H[Outlet: Page Content]
+    end
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    subgraph Pages
+        H --> I[Home.tsx]
+        H --> J[About.tsx]
+        H --> K[Resume.tsx]
+        H --> L[Contact.tsx]
+    end
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    I --> M[Tailwind Styled Components]
+    J --> M
+    K --> M
+    L --> M
+    
+    classDef main fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff;
+    classDef layout fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff;
+    classDef page fill:#8b5cf6,stroke:#6d28d9,stroke-width:2px,color:#fff;
+    
+    class A,B,C,D,E main;
+    class F,G,H layout;
+    class I,J,K,L page;
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Folder Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+d:\Protfolio
+├── public/                 # Static assets (favicons, manifest, etc.)
+├── src/                    # Application source code
+│   ├── assets/             # Images, fonts, and other asset files
+│   ├── components/         # Reusable React components (e.g., Layout)
+│   ├── pages/              # Route-level components (Home, About, Resume, Contact)
+│   ├── App.tsx             # Main application component & route definitions
+│   ├── main.tsx            # Application entry point & React root
+│   └── index.css           # Global stylesheets & Tailwind directives
+├── index.html              # HTML template
+├── package.json            # Project dependencies and scripts
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── vite.config.ts          # Vite bundler configuration
 ```
+
+## 🛠️ Setup & Installation
+
+To run this project locally, follow these steps:
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed (v18 or higher recommended). Use of a package manager like `npm`, `yarn`, or `pnpm` is required. `pnpm` is recommended as there is a `pnpm-lock.yaml` file present.
+
+### Installation Steps
+
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone https://github.com/shristi2211/Portfolio_Shristi.git
+   cd Portfolio_Shristi
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pnpm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   pnpm dev
+   ```
+   *The application will be accessible at `http://localhost:5173/` by default.*
+
+4. **Build for production**:
+   ```bash
+   pnpm build
+   ```
+   *This will generate a compiled bundle in the `dist/` directory.*
+
+5. **Preview the production build**:
+   ```bash
+   pnpm preview
+   ```
+
+## 📜 Available Scripts
+
+- `dev` (`vite`): Starts the Vite development server with Hot Module Replacement (HMR).
+- `build` (`tsc -b && vite build`): Type-checks the TypeScript code and then bundles the application.
+- `lint` (`eslint .`): Runs ESLint over the project to find and fix problems.
+- `preview` (`vite preview`): Boots up a local static web server that serves the files from `dist` to let you preview your production build.
+
+## ✨ Features
+
+- **Responsive Design**: Mobile-first architecture using Tailwind CSS, ensuring the portfolio looks stunning on all devices.
+- **Client-Side Routing**: Fast, seamless page transitions using React Router v7.
+- **Modern React**: Employs React 19 methodologies including Hooks and functional components.
+- **Type Safety**: Fully built with TypeScript to catch errors early and enhance developer experience.
