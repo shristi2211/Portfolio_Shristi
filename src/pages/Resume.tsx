@@ -422,7 +422,7 @@ export default function Resume() {
         {/* INTERNSHIPS */}
         <div className="mb-4 relative print:break-before-page">
           <h2 className="text-[13px] font-bold uppercase tracking-widest border-b-[1.5px] border-black pb-0.5 mb-2 text-black">Internships</h2>
-          
+         
           <div className="mb-2 text-[13px]">
             <div className="flex justify-between font-bold text-black">
               <span>Full Stack Developer Intern <span className="font-normal italic">| RNR Consulting Pvt. Ltd.</span></span>
@@ -472,9 +472,7 @@ export default function Resume() {
             </ul>
           </div>
         </div>
-
       </div>
-
     </div>
   );
 }
