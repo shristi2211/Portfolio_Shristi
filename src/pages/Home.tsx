@@ -70,10 +70,10 @@ export default function Home() {
     <>
       <section className="min-h-screen w-full flex flex-col md:flex-row">
         <div className="w-full md:w-1/2 bg-brand-lime flex flex-col justify-center px-12 lg:px-24 py-32 order-2 md:order-1 min-h-[50vh] md:min-h-screen pt-24 md:pt-32">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-brand-dark leading-tight mb-8">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl text-brand-dark leading-tight mb-8">
             Captivating<br/>Digital<br/>Experiences
           </h1>
-          <p className="text-brand-dark text-lg md:text-xl font-sans mb-10 max-w-lg leading-relaxed">
+          <p className="text-brand-dark text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
             Creative software developer specializing in high-performance web applications and beautiful user interfaces.
           </p>
           <Link to="/contact" className="inline-block bg-brand-dark text-white px-8 py-4 rounded font-semibold tracking-wider text-center max-w-xs hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
@@ -93,7 +93,7 @@ export default function Home() {
       <section className="w-full bg-white py-24 select-none flex flex-col items-center relative">
         {/* User Requested Links and Description */}
         <div className="w-full px-8 md:px-12 lg:px-24 mb-16 flex flex-col items-center text-center">
-          <h2 className="text-black font-sans font-bold text-4xl md:text-5xl mb-6 tracking-wide">
+          <h2 className="text-black font-bold text-4xl md:text-5xl mb-6 tracking-wide">
             Latest Work Carousel Links
           </h2>
           <p className="w-full max-w-[1400px] text-zinc-600 font-medium text-lg md:text-xl leading-relaxed mt-2 whitespace-normal md:whitespace-nowrap overflow-hidden text-ellipsis">
@@ -133,7 +133,7 @@ export default function Home() {
 
                     {/* Project Title */}
                     <div className="relative z-10 flex-1 flex items-center justify-center">
-                      <h3 className={`font-sans font-bold tracking-[0.25em] text-brand-green text-lg md:text-xl uppercase transition-all duration-500 ease-out
+                      <h3 className={`font-bold tracking-[0.25em] text-brand-green text-lg md:text-xl uppercase transition-all duration-500 ease-out
                         ${activeProject === project.id ? '-translate-y-4 scale-105' : 'translate-y-0 scale-100'}
                       `}>
                         {project.title}
@@ -149,7 +149,7 @@ export default function Home() {
                           e.stopPropagation();
                           setExpandedProject(project.id);
                         }}
-                        className="text-white font-sans font-semibold tracking-[0.2em] uppercase text-xs border-b-2 border-brand-green pb-1.5 hover:text-brand-green transition-colors duration-300"
+                        className="text-white font-semibold tracking-[0.2em] uppercase text-xs border-b-2 border-brand-green pb-1.5 hover:text-brand-green transition-colors duration-300"
                       >
                         View Case Study &rarr;
                       </button>
@@ -160,7 +160,7 @@ export default function Home() {
                 {/* Expanded State Header */}
                 {isExpanded && (
                   <div className="relative w-full flex-shrink-0 h-32 bg-gradient-to-b from-gray-800 via-gray-900 to-black flex items-center justify-center">
-                    <h3 className="text-white font-sans font-bold tracking-[0.25em] text-2xl uppercase">
+                    <h3 className="text-white font-bold tracking-[0.25em] text-2xl uppercase">
                       {project.title}
                     </h3>
                     <button 
@@ -188,7 +188,7 @@ export default function Home() {
                     {project.description}
                   </p>
                   
-                  <h4 className="text-black font-sans font-bold tracking-widest text-xs mb-3">TECHNOLOGIES & SKILLS</h4>
+                  <h4 className="text-black font-bold tracking-widest text-xs mb-3">TECHNOLOGIES & SKILLS</h4>
                   <div className="flex flex-wrap gap-2 mb-8">
                     {project.skills.map((skill, index) => (
                       <span key={index} className="bg-gray-100 text-brand-dark px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide border border-gray-200">
@@ -220,14 +220,14 @@ export default function Home() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
-            <h2 className="text-white text-4xl md:text-5xl font-sans font-bold tracking-wider">MY KNOWLEDGE LEVEL <br/> IN STACKS</h2>
+            <h2 className="text-white text-4xl md:text-5xl font-bold tracking-wider">MY KNOWLEDGE LEVEL <br/> IN STACKS</h2>
           </div>
 
           <div className="space-y-6">
             {knowledgeLevels.map((item, idx) => (
               <div key={idx} className="flex items-center w-full group">
                 {/* Skill Name */}
-                <div className="w-1/3 text-right pr-6 font-sans font-bold text-white text-sm md:text-base tracking-widest opacity-90 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <div className="w-1/3 text-right pr-6 font-bold text-white text-sm md:text-base tracking-widest opacity-90 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   {item.skill}
                 </div>
                 
@@ -241,7 +241,7 @@ export default function Home() {
                 </div>
 
                 {/* Percentage Text */}
-                <div className="w-1/6 pl-4 font-sans font-semibold text-white/80 group-hover:text-white transition-colors">
+                <div className="w-1/6 pl-4 font-semibold text-white/80 group-hover:text-white transition-colors">
                   {item.percent}%
                 </div>
               </div>

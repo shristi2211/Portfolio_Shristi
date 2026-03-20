@@ -13,8 +13,7 @@ export default {
         'brand-green': '#00D261',
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
-        sans: ['Montserrat', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'marquee': 'marquee 25s linear infinite',

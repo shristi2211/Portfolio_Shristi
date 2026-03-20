@@ -10,7 +10,7 @@ export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   // TODO: Paste your Google Apps Script Web App URL here!
-  const GOOGLE_APPS_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_URL";
+  const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzc1SbZ23j3BuckIttBpZB_wGBe33EfdfIhApWqw3d5Ke1gcBfIPgEzLaltBWAaIemn/exec";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -21,21 +21,22 @@ export default function Contact() {
     setStatus('loading');
 
     try {
-      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+      await fetch(GOOGLE_APPS_SCRIPT_URL, {
         method: 'POST',
-        // Make sure it's sending standard text/plain to avoid CORS preflight issues with typical Apps Script setups
+        // 'no-cors' is important for Google Apps Script otherwise it throws CORS errors in the browser, 
+        // even though the script runs successfully on Google's servers.
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ firstName: '', lastName: '', email: '', message: '' });
-      } else {
-        setStatus('error');
-      }
+      // With 'no-cors', the response is opaque and response.ok is false, 
+      // but if we didn't hit a network error (like being offline), it usually means success
+      setStatus('success');
+      setFormData({ firstName: '', lastName: '', email: '', message: '' });
+      
     } catch (error) {
       console.error(error);
       setStatus('error');
@@ -45,8 +46,8 @@ export default function Contact() {
   return (
     <div className="w-full mt-24">
       <section className="bg-brand-lime py-24 px-8 md:px-12 lg:px-24 min-h-[70vh] flex flex-col items-center justify-center">
-         <h2 className="text-5xl md:text-6xl font-serif text-brand-dark mb-8 text-center tracking-wide">Get In Touch</h2>
-         <p className="text-xl font-sans text-brand-dark text-center max-w-2xl mb-12">
+         <h2 className="text-5xl md:text-6xl text-brand-dark mb-8 text-center tracking-wide">Get In Touch</h2>
+         <p className="text-xl text-brand-dark text-center max-w-2xl mb-12">
            Looking to build something high-performance and beautiful? Let’s connect. Drop me a message for project inquiries, representation, or just to say hi.
          </p>
 
@@ -58,11 +59,11 @@ export default function Contact() {
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                  </svg>
                </div>
-               <h3 className="text-3xl font-serif text-brand-dark mb-4">Message Sent!</h3>
-               <p className="text-gray-600 font-sans text-center mb-8">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+               <h3 className="text-3xl text-brand-dark mb-4">Message Sent!</h3>
+               <p className="text-gray-600 text-center mb-8">Thank you for reaching out. I'll get back to you as soon as possible.</p>
                <button 
                  onClick={() => setStatus('idle')}
-                 className="bg-brand-dark text-white px-8 py-3 rounded hover:bg-opacity-90 transition font-semibold font-sans"
+                 className="bg-brand-dark text-white px-8 py-3 rounded hover:bg-opacity-90 transition font-semibold "
                >
                  Send Another Message
                </button>
@@ -71,31 +72,31 @@ export default function Contact() {
              <form className="space-y-6 animate-[fade-in_0.5s_ease-out]" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block font-sans text-sm font-semibold text-gray-700 mb-1">First Name *</label>
-                    <input type="text" id="firstName" value={formData.firstName} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded font-sans focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'} />
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-1">First Name *</label>
+                    <input type="text" id="firstName" value={formData.firstName} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'} />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block font-sans text-sm font-semibold text-gray-700 mb-1">Last Name *</label>
-                    <input type="text" id="lastName" value={formData.lastName} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded font-sans focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'} />
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-1">Last Name *</label>
+                    <input type="text" id="lastName" value={formData.lastName} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'} />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="block font-sans text-sm font-semibold text-gray-700 mb-1">Email *</label>
-                  <input type="email" id="email" value={formData.email} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded font-sans focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'} />
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
+                  <input type="email" id="email" value={formData.email} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'} />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block font-sans text-sm font-semibold text-gray-700 mb-1">Message</label>
-                  <textarea id="message" value={formData.message} onChange={handleChange} rows={5} className="w-full border border-gray-300 p-3 rounded font-sans focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'}></textarea>
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+                  <textarea id="message" value={formData.message} onChange={handleChange} rows={5} className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-brand-dark focus:ring-1 focus:ring-brand-dark" required disabled={status === 'loading'}></textarea>
                 </div>
                 
                 {status === 'error' && (
-                  <p className="text-red-600 font-semibold font-sans text-sm">Something went wrong. Please try again or email me directly.</p>
+                  <p className="text-red-600 font-semibold text-sm">Something went wrong. Please try again or email me directly.</p>
                 )}
 
                 <button 
                   type="submit" 
                   disabled={status === 'loading'}
-                  className="w-full bg-brand-dark text-white font-sans font-semibold py-4 rounded hover:bg-opacity-90 transition shadow flex justify-center items-center disabled:opacity-75 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-dark text-white font-semibold py-4 rounded hover:bg-opacity-90 transition shadow flex justify-center items-center disabled:opacity-75 disabled:cursor-not-allowed"
                 >
                   {status === 'loading' ? (
                     <span className="flex items-center gap-2">

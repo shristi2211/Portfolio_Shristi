@@ -40,7 +40,7 @@ export default function About() {
     <div className="w-full flex-col mt-24">
       {/* 60/40 Two-Column Section */}
       <section className="bg-white py-16 px-8 md:px-12 lg:px-24">
-         <h2 className="text-4xl md:text-5xl font-serif text-brand-dark mb-16 text-center tracking-wide">About Me</h2>
+         <h2 className="text-4xl md:text-5xl text-brand-dark mb-16 text-center tracking-wide">About Me</h2>
          
          <div className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-12 lg:gap-20 items-center lg:items-start">
             
@@ -56,10 +56,10 @@ export default function About() {
                </div>
 
                <div className="space-y-3">
-                 <h3 className="text-3xl md:text-4xl font-serif text-brand-dark font-bold">
+                 <h3 className="text-3xl md:text-4xl text-brand-dark font-bold">
                    Hi, I'm Shristi Srivastava
                  </h3>
-                 <p className="text-xl md:text-2xl font-sans text-brand-green font-semibold h-8 md:h-10 flex items-center justify-center">
+                 <p className="text-xl md:text-2xl text-brand-green font-semibold h-8 md:h-10 flex items-center justify-center">
                    &nbsp; 
                    <span className="text-brand-dark border-r-2 border-brand-dark pr-1 animate-pulse">
                      {typewriterText}
@@ -108,12 +108,12 @@ export default function About() {
                    {/* Vision Content */}
                    {activeTab === 'vision' && (
                      <div className="animate-[fade-in_0.3s_ease-out]">
-                       <h3 className="text-2xl md:text-3xl font-serif text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Vision</h3>
+                       <h3 className="text-2xl md:text-3xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Vision</h3>
                        <div className="border-l-2 border-brand-lime/50 pl-6 md:pl-8 relative ml-2 md:ml-0">
                          <div className="relative">
                            <span className="absolute -left-[33px] md:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                            <h4 className="text-lg md:text-xl font-bold text-brand-dark leading-tight mb-3">Shaping the Future of Digital Interaction</h4>
-                           <p className="font-sans text-gray-700 leading-relaxed text-base md:text-lg">
+                           <p className="text-gray-700 leading-relaxed text-base md:text-lg">
                              To build digital ecosystems where technology becomes invisible, replaced entirely by frictionless human experiences. I envision a web that is not just functional, but deeply intuitive and beautifully crafted — a standard where robust architecture and striking design are inseparable.
                            </p>
                          </div>
@@ -124,12 +124,12 @@ export default function About() {
                    {/* Mission Content */}
                    {activeTab === 'mission' && (
                      <div className="animate-[fade-in_0.3s_ease-out]">
-                       <h3 className="text-2xl md:text-3xl font-serif text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Mission</h3>
+                       <h3 className="text-2xl md:text-3xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Mission</h3>
                        <div className="border-l-2 border-brand-lime/50 pl-6 md:pl-8 relative ml-2 md:ml-0">
                          <div className="relative">
                            <span className="absolute -left-[33px] md:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                            <h4 className="text-lg md:text-xl font-bold text-brand-dark leading-tight mb-3">Engineering Elegance from Chaos</h4>
-                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 font-sans text-base md:text-lg leading-relaxed">
+                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 text-base md:text-lg leading-relaxed">
                              <li><strong>Bridge the Gap:</strong> Unite backend complexity with frontend simplicity, ensuring powerful systems feel effortless to the user.</li>
                              <li><strong>Relentless Optimization:</strong> Continuously refine code and architecture to shave milliseconds off latency, because speed is a feature.</li>
                              <li><strong>Push Boundaries:</strong> Implement modern architectures like Distributed Monoliths and Event-Driven systems to solve scaling challenges before they happen.</li>
@@ -143,12 +143,12 @@ export default function About() {
                    {/* Result Content */}
                    {activeTab === 'result' && (
                      <div className="animate-[fade-in_0.3s_ease-out]">
-                       <h3 className="text-2xl md:text-3xl font-serif text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">The Results</h3>
+                       <h3 className="text-2xl md:text-3xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">The Results</h3>
                        <div className="border-l-2 border-brand-lime/50 pl-6 md:pl-8 relative ml-2 md:ml-0">
                          <div className="relative">
                            <span className="absolute -left-[33px] md:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                            <h4 className="text-lg md:text-xl font-bold text-brand-dark leading-tight mb-3">Impact Driven By Code</h4>
-                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 font-sans text-base md:text-lg leading-relaxed">
+                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 text-base md:text-lg leading-relaxed">
                              <li>Architected high-availability services handling large-scale data synchronization smoothly, ensuring 99.9% uptime.</li>
                              <li>Reduced API latency by 30% yielding demonstrably better user retention and engagement on enterprise applications.</li>
                              <li>Led cross-functional teams to deliver massive platforms successfully under tight deadlines and peak concurrent loads.</li>
@@ -163,49 +163,50 @@ export default function About() {
             </div>
 
             {/* 40% Column - Poetry */}
-            <div className="w-full lg:w-[40%] text-lg md:text-xl font-sans text-gray-700 leading-relaxed text-center lg:text-left space-y-6 pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-gray-100 lg:pl-12">
+            <div className="w-full lg:w-[40%] text-lg md:text-xl text-gray-700 leading-relaxed text-center lg:text-left space-y-6 pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-gray-100 lg:pl-12">
                <p>
                  Lines of code are my ink,<br/>
-                 And the terminal—my boundless canvas.
+                 the terminal—where I design and think.
                </p>
 
                <p>
-                 I exist where imagination converges with logic,<br/>
-                 Where ideas are not just dreamed,<br/>
-                 but engineered into reality.
+                 At the crossroads of logic and imagination,,<br/>
+                 I turn ideas into real-world creation.
                </p>
 
                <p>
-                 I think in systems,<br/>
-                 Yet I build for people—<br/>
-                 For their needs, their emotions, their moments.
+                 I think in systems, structured and tight,<br/>
+                 but build for people—their needs in sight.
                </p>
 
                <p>
-                 Because today, "good" is no longer enough.<br/>
-                 This generation seeks more—<br/>
-                 Experiences that breathe,<br/>
-                 Interfaces that speak,<br/>
-                 Systems that stand unshaken<br/>
-                 under the weight of the world.
+                 Because today, “good” won’t suffice,<br/>
+                 software must feel seamless, intuitive, and precise.
                </p>
 
                <p>
-                 I take the chaos of real-world problems,<br/>
-                 And refine it—layer by layer,<br/>
-                 Until complexity dissolves into simplicity,<br/>
-                 And innovation feels effortless.
+                 Interfaces that flow, effortless and clear,<br/>
+                 systems that scale without breaking under fear.
                </p>
 
                <p>
-                 Because I don't just fix bugs—<br/>
-                 I redefine possibilities.
+                 I take complex problems, messy and wide,<br/>
+                 and refine them to simplicity—layer by layer, inside.
                </p>
 
                <p>
-                 I don't just write code—<br/>
-                 I architect experiences that quietly shape<br/>
-                 how the world lives, thinks, and connects.
+                 Until chaos turns calm, and solutions appear,<br/>
+                 elegant, intuitive, and easy to steer.
+               </p>
+
+               <p>
+                 I don’t just fix bugs buried in code,<br/>
+                 I solve real problems that lighten the load.
+               </p>
+
+               <p>
+                 I don’t just write code line by line,<br/>
+                 I build products that shape how people connect and align.
                </p>
             </div>
 
