@@ -332,10 +332,10 @@ export default function Resume() {
             <p className="text-gray-900 font-medium text-sm">Institute of Technology and Management Gorakhpur</p>
           </div>
           <div className="flex flex-col text-[12px] text-right font-semibold text-black leading-tight">
-            <span>📱 +91-8181884950</span>
-            <span>📧 <a href="mailto:shristisrivastava2211@gmail.com" className="text-black">shristisrivastava2211@gmail.com</a></span>
-            <span>🔗 <a href="https://github.com/shristi2211" className="text-black">GitHub Profile</a></span>
-            <span>🔗 <a href="https://www.linkedin.com/in/shristisrivastava2211/" className="text-black">LinkedIn Profile</a></span>
+            <span>+91-8181884950</span>
+            <span><a href="mailto:shristisrivastava2211@gmail.com" className="text-black">shristisrivastava2211@gmail.com</a></span>
+            <span><a href="https://github.com/shristi2211" className="text-black">GitHub Profile</a></span>
+            <span><a href="https://www.linkedin.com/in/shristisrivastava2211/" className="text-black">LinkedIn Profile</a></span>
           </div>
         </div>
 
