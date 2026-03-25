@@ -8,7 +8,7 @@ export default function Resume() {
       {/* --- WEB UI (Hidden when printing PDF) --- */}
       <div className="print:hidden">
       {/* Resume Container */}
-      <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24">
+      <section className="w-full bg-white pt-28 md:pt-32 pb-16 px-6 md:px-12 lg:px-24">
 
         <div className="max-w-7xl mx-auto space-y-16">
 

@@ -95,8 +95,8 @@ export default function Layout() {
         </nav>
       </header>
 
-      {/* Main content — extra bottom padding on mobile for the bottom tab bar */}
-      <main className="flex-1 w-full mt-[72px] md:mt-0 print:mt-0 print:block">
+      {/* Main content — pages now handle their own top padding to sit under header */}
+      <main className="flex-1 w-full print:mt-0 print:block">
         <Outlet />
       </main>
 

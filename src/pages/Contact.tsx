@@ -45,7 +45,7 @@ export default function Contact() {
 
   return (
     <div className="w-full">
-      <section className="bg-brand-lime py-24 px-8 md:px-12 lg:px-24 min-h-[70vh] flex flex-col items-center justify-center">
+      <section className="bg-brand-lime pt-28 md:pt-32 pb-24 px-8 md:px-12 lg:px-24 min-h-[70vh] flex flex-col items-center justify-center">
          <h2 className="text-5xl md:text-6xl text-brand-dark mb-8 text-center tracking-wide">Get In Touch</h2>
          <p className="text-xl text-brand-dark text-center max-w-2xl mb-12">
            Looking to build something high-performance and beautiful? Let’s connect. Drop me a message for project inquiries, representation, or just to say hi.

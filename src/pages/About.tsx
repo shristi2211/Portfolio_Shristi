@@ -39,7 +39,7 @@ export default function About() {
   return (
     <div className="w-full flex-col">
       {/* 60/40 Two-Column Section */}
-      <section className="bg-white py-16 px-8 md:px-12 lg:px-24">
+      <section className="bg-white pt-28 md:pt-32 pb-16 px-8 md:px-12 lg:px-24">
          <h2 className="text-4xl md:text-5xl text-brand-dark mb-16 text-center tracking-wide">About Me</h2>
          
          <div className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-12 lg:gap-20 items-center lg:items-start">
