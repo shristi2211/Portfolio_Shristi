@@ -40,7 +40,7 @@ export default function About() {
     <div className="w-full flex-col">
       {/* 60/40 Two-Column Section */}
       <section className="bg-white pt-28 md:pt-32 pb-16 px-8 md:px-12 lg:px-24">
-         <h2 className="text-4xl md:text-5xl text-brand-dark mb-16 text-center tracking-wide">About Me</h2>
+         <h2 className="text-3xl md:text-4xl text-brand-dark mb-16 text-center tracking-wide">About Me</h2>
          
          <div className="flex flex-col lg:flex-row max-w-7xl mx-auto gap-12 lg:gap-20 items-center lg:items-start">
             
@@ -56,10 +56,10 @@ export default function About() {
                </div>
 
                <div className="space-y-3">
-                 <h3 className="text-3xl md:text-4xl text-brand-dark font-bold">
+                 <h3 className="text-2xl md:text-3xl text-brand-dark font-bold">
                    Hi, I'm Shristi Srivastava
                  </h3>
-                 <p className="text-xl md:text-2xl text-brand-green font-semibold h-8 md:h-10 flex items-center justify-center">
+                 <p className="text-lg md:text-xl text-brand-green font-semibold h-8 md:h-10 flex items-center justify-center">
                    &nbsp; 
                    <span className="text-brand-dark border-r-2 border-brand-dark pr-1 animate-pulse">
                      {typewriterText}
@@ -108,12 +108,12 @@ export default function About() {
                    {/* Vision Content */}
                    {activeTab === 'vision' && (
                      <div className="animate-[fade-in_0.3s_ease-out]">
-                       <h3 className="text-2xl md:text-3xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Vision</h3>
+                       <h3 className="text-xl md:text-2xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Vision</h3>
                        <div className="border-l-2 border-brand-lime/50 pl-6 md:pl-8 relative ml-2 md:ml-0">
                          <div className="relative">
                            <span className="absolute -left-[33px] md:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
-                           <h4 className="text-lg md:text-xl font-bold text-brand-dark leading-tight mb-3">Shaping the Future of Digital Interaction</h4>
-                           <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                           <h4 className="text-base md:text-lg font-bold text-brand-dark leading-tight mb-3">Shaping the Future of Digital Interaction</h4>
+                           <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                              To build digital ecosystems where technology becomes invisible, replaced entirely by frictionless human experiences. I envision a web that is not just functional, but deeply intuitive and beautifully crafted — a standard where robust architecture and striking design are inseparable.
                            </p>
                          </div>
@@ -124,12 +124,12 @@ export default function About() {
                    {/* Mission Content */}
                    {activeTab === 'mission' && (
                      <div className="animate-[fade-in_0.3s_ease-out]">
-                       <h3 className="text-2xl md:text-3xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Mission</h3>
+                       <h3 className="text-xl md:text-2xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">My Mission</h3>
                        <div className="border-l-2 border-brand-lime/50 pl-6 md:pl-8 relative ml-2 md:ml-0">
                          <div className="relative">
                            <span className="absolute -left-[33px] md:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
-                           <h4 className="text-lg md:text-xl font-bold text-brand-dark leading-tight mb-3">Engineering Elegance from Chaos</h4>
-                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 text-base md:text-lg leading-relaxed">
+                           <h4 className="text-base md:text-lg font-bold text-brand-dark leading-tight mb-3">Engineering Elegance from Chaos</h4>
+                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 text-sm md:text-base leading-relaxed">
                              <li><strong>Bridge the Gap:</strong> Unite backend complexity with frontend simplicity, ensuring powerful systems feel effortless to the user.</li>
                              <li><strong>Relentless Optimization:</strong> Continuously refine code and architecture to shave milliseconds off latency, because speed is a feature.</li>
                              <li><strong>Push Boundaries:</strong> Implement modern architectures like Distributed Monoliths and Event-Driven systems to solve scaling challenges before they happen.</li>
@@ -143,12 +143,12 @@ export default function About() {
                    {/* Result Content */}
                    {activeTab === 'result' && (
                      <div className="animate-[fade-in_0.3s_ease-out]">
-                       <h3 className="text-2xl md:text-3xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">The Results</h3>
+                       <h3 className="text-xl md:text-2xl text-brand-dark mb-6 border-b-2 border-brand-lime pb-2 inline-block">The Results</h3>
                        <div className="border-l-2 border-brand-lime/50 pl-6 md:pl-8 relative ml-2 md:ml-0">
                          <div className="relative">
                            <span className="absolute -left-[33px] md:-left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
-                           <h4 className="text-lg md:text-xl font-bold text-brand-dark leading-tight mb-3">Impact Driven By Code</h4>
-                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 text-base md:text-lg leading-relaxed">
+                           <h4 className="text-base md:text-lg font-bold text-brand-dark leading-tight mb-3">Impact Driven By Code</h4>
+                           <ul className="list-disc list-outside ml-4 md:ml-6 space-y-2 md:space-y-3 text-gray-700 text-sm md:text-base leading-relaxed">
                              <li>Architected high-availability services handling large-scale data synchronization smoothly, ensuring 99.9% uptime.</li>
                              <li>Reduced API latency by 30% yielding demonstrably better user retention and engagement on enterprise applications.</li>
                              <li>Led cross-functional teams to deliver massive platforms successfully under tight deadlines and peak concurrent loads.</li>
