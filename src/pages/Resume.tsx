@@ -14,8 +14,8 @@ export default function Resume() {
 
           {/* Professional Summary */}
           <div className="space-y-4 text-center max-w-4xl mx-auto">
-            <h3 className="text-3xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block">Professional Summary</h3>
-            <p className="text-gray-700 leading-relaxed text-lg text-justify md:text-center mt-6">
+            <h3 className="text-2xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block">Professional Summary</h3>
+            <p className="text-gray-700 leading-relaxed text-base text-justify md:text-center mt-6">
               Full Stack Developer with 1+ year of experience in building scalable distributed systems and event-driven architectures. Expert in <strong>Golang, Next.js 15, and PostgreSQL</strong>, with a deep understanding of high-performance patterns like <strong>Transactional Outbox, Hexagonal Architecture, and gRPC</strong>. Proven track record of leading technical teams for high-traffic platforms and optimizing system latency by <strong>30%</strong>. Passionate about solving complex data consistency and concurrency challenges.
             </p>
           </div>
@@ -26,7 +26,7 @@ export default function Resume() {
             <div className="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-200 pb-4">
               <button
                 onClick={() => setActiveTab('education')}
-                className={`px-8 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 ${activeTab === 'education'
+                className={`px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${activeTab === 'education'
                     ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                     : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
                   }`}
@@ -35,7 +35,7 @@ export default function Resume() {
               </button>
               <button
                 onClick={() => setActiveTab('experience')}
-                className={`px-8 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 ${activeTab === 'experience'
+                className={`px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${activeTab === 'experience'
                     ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                     : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
                   }`}
@@ -44,7 +44,7 @@ export default function Resume() {
               </button>
               <button
                 onClick={() => setActiveTab('internship')}
-                className={`px-8 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 ${activeTab === 'internship'
+                className={`px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${activeTab === 'internship'
                     ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                     : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
                   }`}
@@ -58,19 +58,19 @@ export default function Resume() {
               {/* Education Content */}
               {activeTab === 'education' && (
                 <div className="animate-[fade-in_0.3s_ease-out]">
-                  <h3 className="text-3xl text-brand-dark mb-8 border-b-2 border-brand-lime pb-2 inline-block">Education</h3>
+                  <h3 className="text-2xl text-brand-dark mb-8 border-b-2 border-brand-lime pb-2 inline-block">Education</h3>
                   <div className="border-l-2 border-brand-lime/50 pl-8 space-y-12 relative ml-4 md:ml-0">
 
                     {/* Edu Item 1 */}
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark transition-colors leading-tight mb-2 md:mb-0 max-w-[80%]">Bachelor of Technology in Computer Science and Engineering</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">2021 – 2025</span>
+                        <h4 className="text-lg font-bold text-brand-dark transition-colors leading-tight mb-2 md:mb-0 max-w-[80%]">Bachelor of Technology in Computer Science and Engineering</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">2021 – 2025</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium ">
-                        <p className="italic text-base">Institute Of Technology and Management, Gida</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">Gorakhpur, India</p>
+                        <p className="italic text-sm">Institute Of Technology and Management, Gida</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">Gorakhpur, India</p>
                       </div>
                     </div>
 
@@ -78,12 +78,12 @@ export default function Resume() {
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">Intermediate, XII (PCM) CBSE</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">2019 – 2021</span>
+                        <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">Intermediate, XII (PCM) CBSE</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">2019 – 2021</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium ">
-                        <p className="italic text-base">J.P Education Academy, Gorakhnath</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">Gorakhpur, India</p>
+                        <p className="italic text-sm">J.P Education Academy, Gorakhnath</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">Gorakhpur, India</p>
                       </div>
                     </div>
 
@@ -91,12 +91,12 @@ export default function Resume() {
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">High School, X (Science) ICSE</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">2019 – 2021</span>
+                        <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">High School, X (Science) ICSE</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">2019 – 2021</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium ">
-                        <p className="italic text-base">Springer Public School, Bargadwa</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">Gorakhpur, India</p>
+                        <p className="italic text-sm">Springer Public School, Bargadwa</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">Gorakhpur, India</p>
                       </div>
                     </div>
 
@@ -107,21 +107,21 @@ export default function Resume() {
               {/* Experience Content */}
               {activeTab === 'experience' && (
                 <div className="animate-[fade-in_0.3s_ease-out]">
-                  <h3 className="text-3xl text-brand-dark mb-8 border-b-2 border-brand-lime pb-2 inline-block">Professional Experience</h3>
+                  <h3 className="text-2xl text-brand-dark mb-8 border-b-2 border-brand-lime pb-2 inline-block">Professional Experience</h3>
                   <div className="border-l-2 border-brand-lime/50 pl-8 relative ml-4 md:ml-0">
 
                     {/* Exp Item 1 */}
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">Full Stack Developer</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">Apr 2025 – Present</span>
+                        <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">Full Stack Developer</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">Apr 2025 – Present</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium mb-5">
-                        <p className="italic text-base">RNR Consulting Pvt. Ltd.</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">New Delhi, India</p>
+                        <p className="italic text-sm">RNR Consulting Pvt. Ltd.</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">New Delhi, India</p>
                       </div>
-                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-sm md:text-base leading-relaxed text-justify md:text-left">
+                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed text-justify md:text-left">
                         <li>Architected a <strong>Distributed Monolith</strong> for NHIT/Consent Manager via <strong>Kong API Gateway</strong>, centralizing authentication and routing for modular services on a shared <strong>PostgreSQL</strong> instance.</li>
                         <li>Engineered a high-reliability <strong>Notification System</strong> using <strong>Transactional Outbox</strong> and <strong>NATS JetStream</strong>, ensuring 100% delivery for 120+ concurrent events and solving the Dual-Write problem.</li>
                         <li>Optimized <strong>Golang</strong> consumers with <strong>PostgreSQL SKIP LOCKED</strong> logic, eliminating database resource contention and deadlocks during high-traffic bursts.</li>
@@ -138,20 +138,20 @@ export default function Resume() {
               {/* Internship Content */}
               {activeTab === 'internship' && (
                 <div className="animate-[fade-in_0.3s_ease-out]">
-                  <h3 className="text-3xl text-brand-dark mb-8 border-b-2 border-brand-lime pb-2 inline-block">Internship Details</h3>
+                  <h3 className="text-2xl text-brand-dark mb-8 border-b-2 border-brand-lime pb-2 inline-block">Internship Details</h3>
                   <div className="border-l-2 border-brand-lime/50 pl-8 relative ml-4 md:ml-0">
 
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">Full Stack Developer Intern</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">Apr 2025 – Nov 2025</span>
+                        <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">Full Stack Developer Intern</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">Apr 2025 – Nov 2025</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium mb-5">
-                        <p className="italic text-base">RNR Consulting Pvt. Ltd.</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">New Delhi, India</p>
+                        <p className="italic text-sm">RNR Consulting Pvt. Ltd.</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">New Delhi, India</p>
                       </div>
-                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-sm md:text-base leading-relaxed text-justify md:text-left">
+                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed text-justify md:text-left">
                         <li>Enhanced security with authentication and authorization mechanisms. </li>
                         <li>In-depth understanding Full Stack Golang with hands on experience.</li>
                         <li>Debug, test, and optimize code for performance and scalability. </li>
@@ -162,14 +162,14 @@ export default function Resume() {
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">Java Developer Intern</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">Dec 2024 – Feb 2025</span>
+                        <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">Java Developer Intern</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">Dec 2024 – Feb 2025</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium mb-5">
-                        <p className="italic text-base">Oasis Infobyte</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">Remote</p>
+                        <p className="italic text-sm">Oasis Infobyte</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">Remote</p>
                       </div>
-                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-sm md:text-base leading-relaxed text-justify md:text-left">
+                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed text-justify md:text-left">
                         <li>Assist in designing, developing, and maintaining Java-based applications. </li>
                         <li>Collaborate with cross-functional teams to gather and analyze requirements. </li>
                         <li>Debug, test, and optimize code for performance and scalability. </li>
@@ -179,14 +179,14 @@ export default function Resume() {
                     <div className="relative">
                       <span className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-brand-lime ring-4 ring-white"></span>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                        <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">Java Full Stack Developer Intern</h4>
-                        <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">July 2024 – Sep 2024</span>
+                        <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">Java Full Stack Developer Intern</h4>
+                        <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">July 2024 – Sep 2024</span>
                       </div>
                       <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium mb-5">
-                        <p className="italic text-base">Mentortca Technology Private Limited</p>
-                        <p className="md:ml-4 text-sm mt-1 md:mt-0">Noida, Uttar Pradesh</p>
+                        <p className="italic text-sm">Mentortca Technology Private Limited</p>
+                        <p className="md:ml-4 text-xs mt-1 md:mt-0">Noida, Uttar Pradesh</p>
                       </div>
-                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-sm md:text-base leading-relaxed text-justify md:text-left">
+                      <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed text-justify md:text-left">
                         <li>Developed valuable interpersonal and technical skills through daily two-hour training sessions and weekly assessments, which involved webpage creation and report presentations to evaluate my progress. </li>
                         <li>Gained hands-on experience with various front-end and back-end technologies during live training sessions, significantly enhancing my practical knowledge and professional growth.</li>
                         <li>Researched various AI and ChatGPT tools in the market to improve my efficiency.</li>
@@ -201,17 +201,17 @@ export default function Resume() {
 
           {/* Achievements (Positions of Responsibility) */}
           <div className="space-y-6 pt-10 pb-16">
-            <h3 className="text-3xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block">Achievements & Leadership</h3>
+            <h3 className="text-2xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block">Achievements & Leadership</h3>
             <div className="bg-brand-neutral/5 rounded-2xl p-6 md:p-8 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
-                <h4 className="text-xl font-bold text-brand-dark leading-tight mb-2 md:mb-0">Technical Team Lead | Yukti Sangam Hackathon</h4>
-                <span className="text-sm font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">May 2025 – July 2025</span>
+                <h4 className="text-lg font-bold text-brand-dark leading-tight mb-2 md:mb-0">Technical Team Lead | Yukti Sangam Hackathon</h4>
+                <span className="text-xs font-bold text-brand-lime bg-brand-lime/10 px-3 py-1 rounded-full whitespace-nowrap self-start md:self-auto">May 2025 – July 2025</span>
               </div>
               <div className="flex flex-col md:flex-row md:justify-between text-gray-600 font-medium mb-5">
-                <p className="italic text-base">RNR Consulting Pvt. Ltd.</p>
-                <p className="md:ml-4 text-sm mt-1 md:mt-0">New Delhi, India</p>
+                <p className="italic text-sm">RNR Consulting Pvt. Ltd.</p>
+                <p className="md:ml-4 text-xs mt-1 md:mt-0">New Delhi, India</p>
               </div>
-              <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-sm md:text-base leading-relaxed text-justify md:text-left">
+              <ul className="list-disc list-outside ml-4 space-y-3 text-gray-700 text-xs md:text-sm leading-relaxed text-justify md:text-left">
                 <li>Spearheaded a cross-functional team of 5+ developers to deliver the official hackathon platform, maintaining 100% stability for <strong>300+ active users</strong> during peak registration periods.</li>
                 <li>Managed the <strong>end-to-end SDLC</strong>, from architecting system modules to conducting code reviews, ensuring a high-performance registration and automated scoring engine.</li>
                 <li>Mentored junior engineers on <strong>clean code principles</strong> and API integration, while collaborating with senior stakeholders to ensure technical alignment with business event goals.</li>
@@ -224,7 +224,7 @@ export default function Resume() {
 
       {/* Architecture Worked On (Full Width Floating Cards) */}
       <div className="w-full bg-white relative pb-16 pt-8 border-y border-gray-100">
-        <h3 className="text-3xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block relative z-10 text-center w-full max-w-7xl mx-auto mb-10 block">Architecture & Its Patterns Worked On</h3>
+        <h3 className="text-2xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block relative z-10 text-center w-full max-w-7xl mx-auto mb-10 block">Architecture & Its Patterns Worked On</h3>
 
         {/* Gradient masks for smooth edges */}
         <div className="absolute left-0 top-[7.5rem] bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
@@ -235,54 +235,54 @@ export default function Resume() {
 
             {/* Core Architecture Set */}
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">Distributed Monolith</span>
+              <span className="text-lg tracking-wide">Distributed Monolith</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Monolith</span>
+              <span className="text-lg tracking-wide font-bold">Monolith</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">Microservices</span>
+              <span className="text-lg tracking-wide">Microservices</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Hexagonal Architecture (Ports and Adapters)</span>
+              <span className="text-lg tracking-wide font-bold">Hexagonal Architecture (Ports and Adapters)</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">Event-Driven Architecture</span>
+              <span className="text-lg tracking-wide">Event-Driven Architecture</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Transactional Outbox Pattern</span>
+              <span className="text-lg tracking-wide font-bold">Transactional Outbox Pattern</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">High-Performance Patterns</span>
+              <span className="text-lg tracking-wide">High-Performance Patterns</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Database Concurrency Patterns</span>
+              <span className="text-lg tracking-wide font-bold">Database Concurrency Patterns</span>
             </div>
 
             {/* Duplicated for smooth infinite scroll */}
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">Distributed Monolith</span>
+              <span className="text-lg tracking-wide">Distributed Monolith</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Monolith</span>
+              <span className="text-lg tracking-wide font-bold">Monolith</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">Microservices</span>
+              <span className="text-lg tracking-wide">Microservices</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Hexagonal Architecture (Ports and Adapters)</span>
+              <span className="text-lg tracking-wide font-bold">Hexagonal Architecture (Ports and Adapters)</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">Event-Driven Architecture</span>
+              <span className="text-lg tracking-wide">Event-Driven Architecture</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Transactional Outbox Pattern</span>
+              <span className="text-lg tracking-wide font-bold">Transactional Outbox Pattern</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-dark text-white rounded-2xl shadow-md shrink-0 border border-brand-neutral/20 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide">High-Performance Patterns</span>
+              <span className="text-lg tracking-wide">High-Performance Patterns</span>
             </div>
             <div className="flex items-center justify-center px-10 py-5 bg-brand-lime text-brand-dark rounded-2xl shadow-md shrink-0 border border-brand-lime/50 transition-transform duration-300 hover:scale-105 cursor-default">
-              <span className="text-xl tracking-wide font-bold">Database Concurrency Patterns</span>
+              <span className="text-lg tracking-wide font-bold">Database Concurrency Patterns</span>
             </div>
 
           </div>
