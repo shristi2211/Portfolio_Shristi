@@ -70,10 +70,10 @@ export default function About() {
                {/* Interactive Tabs Section Moved Inside 60% Column */}
                <div className="w-full pt-8 lg:pt-12">
                  {/* Tabs */}
-                 <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10 border-b border-gray-200 pb-4">
+                 <div className="flex flex-nowrap overflow-x-auto no-scrollbar justify-start md:justify-center gap-2 md:gap-4 mb-10 border-b border-gray-200 pb-4">
                    <button
                      onClick={() => setActiveTab('vision')}
-                     className={`px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-sm transition-all duration-300 ${
+                     className={`px-4 md:px-8 py-2 md:py-3 whitespace-nowrap rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${
                        activeTab === 'vision'
                          ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                          : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
@@ -83,7 +83,7 @@ export default function About() {
                    </button>
                    <button
                      onClick={() => setActiveTab('mission')}
-                     className={`px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-sm transition-all duration-300 ${
+                     className={`px-4 md:px-8 py-2 md:py-3 whitespace-nowrap rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${
                        activeTab === 'mission'
                          ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                          : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
@@ -93,7 +93,7 @@ export default function About() {
                    </button>
                    <button
                      onClick={() => setActiveTab('result')}
-                     className={`px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-sm transition-all duration-300 ${
+                     className={`px-4 md:px-8 py-2 md:py-3 whitespace-nowrap rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${
                        activeTab === 'result'
                          ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                          : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'

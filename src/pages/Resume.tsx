@@ -23,10 +23,10 @@ export default function Resume() {
           {/* Tab Navigation & Content Section */}
           <div className="max-w-4xl mx-auto pt-8">
             {/* Tabs */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12 border-b border-gray-200 pb-4">
+            <div className="flex flex-nowrap overflow-x-auto no-scrollbar justify-start md:justify-center gap-2 md:gap-4 mb-12 border-b border-gray-200 pb-4">
               <button
                 onClick={() => setActiveTab('education')}
-                className={`px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${activeTab === 'education'
+                className={`px-4 md:px-8 py-2 md:py-3 whitespace-nowrap rounded-full font-bold text-[12px] md:text-sm transition-all duration-300 ${activeTab === 'education'
                     ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                     : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
                   }`}
@@ -35,7 +35,7 @@ export default function Resume() {
               </button>
               <button
                 onClick={() => setActiveTab('experience')}
-                className={`px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${activeTab === 'experience'
+                className={`px-4 md:px-8 py-2 md:py-3 whitespace-nowrap rounded-full font-bold text-[12px] md:text-sm transition-all duration-300 ${activeTab === 'experience'
                     ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                     : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
                   }`}
@@ -44,7 +44,7 @@ export default function Resume() {
               </button>
               <button
                 onClick={() => setActiveTab('internship')}
-                className={`px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all duration-300 ${activeTab === 'internship'
+                className={`px-4 md:px-8 py-2 md:py-3 whitespace-nowrap rounded-full font-bold text-[12px] md:text-sm transition-all duration-300 ${activeTab === 'internship'
                     ? 'bg-brand-dark text-white shadow-md transform -translate-y-1'
                     : 'bg-brand-neutral/10 text-brand-dark hover:bg-brand-lime hover:text-brand-dark'
                   }`}
@@ -226,9 +226,8 @@ export default function Resume() {
       <div className="w-full bg-white relative pb-16 pt-8 border-y border-gray-100">
         <h3 className="text-2xl text-brand-dark border-b-2 border-brand-lime pb-2 inline-block relative z-10 text-center w-full max-w-7xl mx-auto mb-10 block">Architecture & Its Patterns Worked On</h3>
 
-        {/* Gradient masks for smooth edges */}
-        <div className="absolute left-0 top-[7.5rem] bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
-        <div className="absolute right-0 top-[7.5rem] bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+        {/* Gradient masks removed per user request */}
+
 
         <div className="relative w-full overflow-hidden flex flex-nowrap py-4">
           <div className="flex animate-marquee hover:[animation-play-state:paused] w-max gap-6 pr-6">
@@ -298,12 +297,12 @@ export default function Resume() {
                 e.preventDefault();
                 window.print();
               }}
-              className="group relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-brand-dark bg-brand-lime rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_30px_rgb(215,225,156,0.4)] ring-4 ring-transparent hover:ring-brand-lime/20 focus:outline-none"
+              className="group relative inline-flex items-center justify-center px-6 md:px-10 py-4 md:py-5 text-sm md:text-lg font-bold text-brand-dark bg-brand-lime rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_30px_rgb(215,225,156,0.4)] ring-4 ring-transparent hover:ring-brand-lime/20 focus:outline-none"
             >
               <div className="absolute inset-0 w-full h-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative z-10 flex items-center">
-                <span className="mr-3">Download Resume in PDF</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 group-hover:translate-y-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <span className="relative z-10 flex items-center whitespace-nowrap">
+                <span className="mr-2 md:mr-3">Download Resume (PDF)</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6 group-hover:translate-y-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
               </span>
