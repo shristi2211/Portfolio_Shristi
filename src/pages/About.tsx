@@ -37,7 +37,7 @@ export default function About() {
   }, [typewriterText, isDeleting, loopNum, typingSpeed]);
 
   return (
-    <div className="w-full flex-col mt-24">
+    <div className="w-full flex-col">
       {/* 60/40 Two-Column Section */}
       <section className="bg-white py-16 px-8 md:px-12 lg:px-24">
          <h2 className="text-4xl md:text-5xl text-brand-dark mb-16 text-center tracking-wide">About Me</h2>

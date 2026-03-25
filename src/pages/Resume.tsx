@@ -4,7 +4,7 @@ export default function Resume() {
   const [activeTab, setActiveTab] = useState<'education' | 'experience' | 'internship'>('education');
 
   return (
-    <div className="w-full mt-24 print:mt-0 print:block">
+    <div className="w-full print:mt-0 print:block">
       {/* --- WEB UI (Hidden when printing PDF) --- */}
       <div className="print:hidden">
       {/* Resume Container */}

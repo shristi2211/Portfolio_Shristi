@@ -80,7 +80,7 @@ export default function Home() {
             Get in touch
           </Link>
         </div>
-        <div className="w-full md:w-1/2 h-[50vh] md:h-screen order-1 md:order-2 relative mt-[72px] md:mt-0">
+        <div className="w-full md:w-1/2 h-[50vh] md:h-screen order-1 md:order-2 relative">
           <img 
             src="/images/headshot-main.png" 
             alt="Jane Doe Developer" 

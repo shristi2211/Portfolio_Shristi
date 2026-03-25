@@ -1,6 +1,46 @@
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router';
 
+// Bottom tab bar items with SVG icons
+const bottomTabs = [
+  {
+    to: '/',
+    label: 'Home',
+    icon: (active: boolean) => (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 2.2 : 1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
+  {
+    to: '/about',
+    label: 'About',
+    icon: (active: boolean) => (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 2.2 : 1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+  },
+  {
+    to: '/resume',
+    label: 'Resume',
+    icon: (active: boolean) => (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 2.2 : 1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+  },
+  {
+    to: '/contact',
+    label: 'Contact',
+    icon: (active: boolean) => (
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={active ? 2.2 : 1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+];
+
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -19,25 +59,30 @@ export default function Layout() {
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (window.confirm("Want to send an email?")) {
-      // Directs to their email as primary and also puts it in CC as requested
       window.location.href = "mailto:shristisrivastava2211@gmail.com?cc=shristisrivastava2211@gmail.com";
     }
   };
 
+  // On mobile: always show a solid header background so it's never invisible
+  // On desktop: keep original transparent→solid scroll behavior on home page
+  const headerBg = scrolled || !isHome
+    ? 'bg-white shadow-md py-4'
+    : 'bg-white md:bg-transparent py-4 md:py-5 shadow-md md:shadow-none';
+
   return (
     <div className="min-h-screen flex flex-col w-full overflow-x-hidden relative print:block print:min-h-0 print:overflow-visible">
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 px-8 py-5 flex justify-between items-center print:hidden ${scrolled || !isHome ? 'bg-white shadow-md py-4' : 'bg-transparent'}`}>
-        {/* Logo always stays dark against the lime background side of the split screen */}
-        <Link to="/" className={`text-2xl tracking-wide text-brand-dark`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 px-6 md:px-8 py-4 md:py-5 flex justify-between items-center print:hidden ${headerBg}`}>
+        {/* Logo */}
+        <Link to="/" className="text-xl md:text-2xl tracking-wide text-brand-dark font-semibold">
           Shristi's Innovations
         </Link>
+
+        {/* Desktop Nav (hidden on mobile) */}
         <nav className={`hidden md:flex gap-8 items-center font-medium tracking-wide transition-colors duration-300 ${scrolled || !isHome ? 'text-brand-dark' : 'text-white drop-shadow-md'}`}>
           <Link to="/" className="hover:text-brand-lime transition-colors">Home</Link>
           <Link to="/about" className="hover:text-brand-lime transition-colors">About</Link>
           <Link to="/resume" className="hover:text-brand-lime transition-colors">Resume</Link>
           <button onClick={handleEmailClick} className="hover:text-brand-lime transition-colors cursor-pointer">Email</button>
-
-          {/* Dynamic Contact Button */}
           <Link
             to="/contact"
             className={`px-6 py-2 rounded transition-all duration-300 ${scrolled || !isHome
@@ -50,11 +95,45 @@ export default function Layout() {
         </nav>
       </header>
 
+      {/* Main content — extra bottom padding on mobile for the bottom tab bar */}
       <main className="flex-1 w-full mt-[72px] md:mt-0 print:mt-0 print:block">
         <Outlet />
       </main>
 
-      <footer className="bg-brand-dark text-white py-16 px-8 flex justify-center flex-col items-center print:hidden">
+      {/* ===== MOBILE BOTTOM TAB BAR ===== */}
+      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.06)] print:hidden" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
+        <div className="flex justify-around items-center h-[72px] px-2 relative">
+          {bottomTabs.map((tab) => {
+            const isActive = location.pathname === tab.to;
+            return (
+              <Link
+                key={tab.to}
+                to={tab.to}
+                className="relative flex flex-col items-center justify-center flex-1 h-full group w-full"
+              >
+                {/* 
+                  When active, this container pops up above the nav bar.
+                  A thick white border perfectly blends with the white nav bar
+                  to simulate a "cutout" or curved indentation.
+                */}
+                <div 
+                  className={`flex items-center justify-center transition-all duration-300 ease-out absolute ${
+                    isActive 
+                      ? '-top-6 w-[64px] h-[64px] bg-brand-lime text-brand-dark rounded-full border-[5px] border-white shadow-lg shadow-brand-dark/20' 
+                      : 'w-12 h-12 bg-transparent text-gray-400 group-hover:text-gray-600 group-active:scale-95'
+                  }`}
+                >
+                  <div className={`transition-transform duration-300 ${isActive ? 'scale-125' : ''}`}>
+                    {tab.icon(isActive)}
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+
+      <footer className="bg-brand-dark text-white py-16 pb-[100px] md:pb-16 px-8 flex justify-center flex-col items-center print:hidden">
         <h2 className="text-3xl mb-6">Shristi Srivastava</h2>
         <p
           className="mb-6 cursor-pointer hover:text-brand-lime transition-colors border-b border-transparent hover:border-brand-lime"
