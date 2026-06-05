@@ -8,24 +8,24 @@ export default function Home() {
   const latestWork = [
     { 
       id: 1, 
-      title: 'PROJECT 01', 
+      title: 'AI Financial Intelligence Platform', 
       link: 'https://github.com/project-1',
-      description: 'A comprehensive enterprise dashboard built with React and Node.js. Optimized for massive data streams with real-time visualization.',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js']
+      description: 'An intelligent full stack financial analytics platform designed to automatically track spending behavior, analyze transaction patterns, and generate AI-powered savings recommendations through secure Account Aggregator integrations and real-time financial insights.',
+      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Golang', 'PostgreSQL', 'WebSockets', 'GraphQL', 'Account Aggregator APIs', 'Real-Time Analytics', 'AI Recommendation Engine', 'Docker', 'AWS']
     },
     { 
       id: 2, 
-      title: 'PROJECT 02', 
+      title: 'AI Content Orchestration Platform', 
       link: 'https://github.com/project-2',
-      description: 'An intuitive consumer mobile application focusing on personal wellness and habit tracking, featuring offline-first architecture.',
-      skills: ['React Native', 'Redux Toolkit', 'Supabase']
+      description: 'A scalable AI-powered publishing infrastructure that automates content generation, media creation, workflow orchestration, and multi-platform distribution across integrated publishing channels.',
+      skills: ['Python', 'Gemini API', 'Antropic API', 'Next.js', 'PostgreSQL', 'Redis', 'AI Automation', 'Image Generation', 'Workflow Pipelines', 'Webhooks', 'Queue Systems', 'Multi-platform Integrations', 'Docker']
     },
     { 
       id: 3, 
-      title: 'PROJECT 03', 
+      title: 'AI Control Plane', 
       link: 'https://github.com/project-3',
-      description: 'Custom e-commerce storefront with a unique 3D product configurator, allowing users to customize products before purchase.',
-      skills: ['Three.js', 'React', 'Express.js']
+      description: 'An enterprise-grade AI orchestration infrastructure designed to manage multi-agent ecosystems, validate AI outputs, orchestrate intelligent workflows, and bridge legacy enterprise systems with modern AI environments.',
+      skills: ['Golang', 'Python', 'Java', 'Hybrid Architecture']
     },
     { 
       id: 4, 
@@ -41,29 +41,29 @@ export default function Home() {
       description: 'Automated workflow management tool that integrates with various third-party APIs to streamline agency operations.',
       skills: ['Vue.js', 'Firebase', 'MongoDB']
     },
-    { 
-      id: 6, 
-      title: 'PROJECT 06', 
-      link: 'https://github.com/project-6',
-      description: 'A high-performance landing page for a SaaS product, optimized for conversion and accessibility.',
-      skills: ['HTML5', 'CSS3', 'Framer Motion']
-    },
-    { 
-      id: 7, 
-      title: 'PROJECT 07', 
-      link: 'https://github.com/project-7',
-      description: 'A high-performance landing page for a SaaS product, optimized for conversion and accessibility.',
-      skills: ['HTML5', 'CSS3', 'Framer Motion']
-    },
   ];
 
-  const knowledgeLevels = [
-    { skill: 'JAVASCRIPT', percent: 90 },
-    { skill: 'REACT & VITE', percent: 95 },
-    { skill: 'TAILWIND CSS', percent: 85 },
-    { skill: 'NODE.JS', percent: 80 },
-    { skill: 'TYPESCRIPT', percent: 85 },
-    { skill: 'GIT & GITHUB', percent: 90 },
+  const engineeringStack = [
+    {
+      category: 'Backend & Distributed Systems',
+      icon: '⚙️',
+      tags: ['Golang', 'gRPC', 'NATS JetStream', 'PostgreSQL', 'Redis', 'GraphQL', 'REST APIs', 'WebSockets'],
+    },
+    {
+      category: 'Frontend & Application Layer',
+      icon: '🖥️',
+      tags: ['Next.js', 'React', 'TypeScript', 'Vanilla JS','Tailwind CSS', 'Vite', 'Flutter'],
+    },
+    {
+      category: 'AI & Automation',
+      icon: '🤖',
+      tags: ['Gemini API', 'AI Workflows', 'Multi-Agent Systems', 'Semantic Processing', 'Automation Pipelines'],
+    },
+    {
+      category: 'Infrastructure & DevOps',
+      icon: '☁️',
+      tags: ['Docker', 'AWS', 'Kong API Gateway', 'CI/CD', 'Distributed Systems', 'Real-Time Architectures'],
+    },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function Home() {
             Captivating<br/>Digital<br/>Experiences
           </h1>
           <p className="text-brand-dark text-base md:text-lg mb-10 max-w-lg leading-relaxed">
-            Creative software developer specializing in high-performance web applications and beautiful user interfaces.
+            Full Stack Engineer building scalable AI systems, distributed backends, and high-performance web applications.
           </p>
           <Link to="/contact" className="inline-block bg-brand-dark text-white px-8 py-4 rounded font-semibold tracking-wider text-center max-w-xs hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-sm md:text-base">
             Get in touch
@@ -214,35 +214,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Knowledge Level Section */}
+      {/* Engineering Stack Section */}
       <section className="w-full relative py-32 bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url("/images/workspace-bg.png")' }}>
-        <div className="absolute inset-0 bg-black/70"></div> {/* Dark overlay */}
-        
+        <div className="absolute inset-0 bg-black/70"></div>
+
         <div className="relative z-10 max-w-4xl mx-auto px-8">
+          {/* Section Heading */}
           <div className="text-center mb-16">
-            <h2 className="text-white text-3xl md:text-4xl font-bold tracking-wider">MY KNOWLEDGE LEVEL <br/> IN STACKS</h2>
+            <span className="inline-block text-brand-green text-xs font-semibold tracking-[0.3em] uppercase mb-4">
+              Full Stack · Distributed Systems · AI Infrastructure
+            </span>
+            <h2 className="text-white text-3xl md:text-4xl font-bold tracking-wider uppercase">
+              Core Engineering<br/>Stack
+            </h2>
+            <div className="mt-5 mx-auto w-12 h-0.5 bg-brand-green rounded-full"></div>
           </div>
 
-          <div className="space-y-6">
-            {knowledgeLevels.map((item, idx) => (
-              <div key={idx} className="flex items-center w-full group">
-                {/* Skill Name */}
-                <div className="w-1/3 text-right pr-6 font-bold text-white text-sm md:text-base tracking-widest opacity-90 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                  {item.skill}
-                </div>
-                
-                {/* Progress Bar Container */}
-                <div className="w-1/2 h-1.5 md:h-2 bg-white/20 rounded-full overflow-hidden relative shadow-inner">
-                  {/* Progress Fill */}
-                  <div 
-                    className="absolute top-0 left-0 h-full bg-brand-green rounded-full shadow-[0_0_10px_#00D261]" 
-                    style={{ width: `${item.percent}%` }}
-                  ></div>
+          {/* Category Cards */}
+          <div className="space-y-10">
+            {engineeringStack.map((group, idx) => (
+              <div key={idx} className="group">
+                {/* Category Label */}
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-lg leading-none">{group.icon}</span>
+                  <span className="text-white/60 text-xs font-semibold tracking-[0.25em] uppercase">
+                    {group.category}
+                  </span>
+                  <div className="flex-1 h-px bg-white/10"></div>
                 </div>
 
-                {/* Percentage Text */}
-                <div className="w-1/6 pl-4 font-semibold text-white/80 group-hover:text-white transition-colors">
-                  {item.percent}%
+                {/* Tech Badges */}
+                <div className="flex flex-wrap gap-2.5">
+                  {group.tags.map((tag, tIdx) => (
+                    <span
+                      key={tIdx}
+                      className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm text-white text-xs font-semibold tracking-wide transition-all duration-300 cursor-default hover:bg-[rgba(0,210,97,0.15)] hover:border-[rgba(0,210,97,0.5)] hover:text-brand-green hover:shadow-[0_0_12px_rgba(0,210,97,0.25)] hover:-translate-y-0.5"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
