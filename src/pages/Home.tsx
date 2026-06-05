@@ -27,27 +27,13 @@ export default function Home() {
       description: 'An enterprise-grade AI orchestration infrastructure designed to manage multi-agent ecosystems, validate AI outputs, orchestrate intelligent workflows, and bridge legacy enterprise systems with modern AI environments.',
       skills: ['Golang', 'Python', 'Java', 'Hybrid Architecture']
     },
-    { 
-      id: 4, 
-      title: 'PROJECT 04', 
-      link: 'https://github.com/project-4',
-      description: 'A social networking platform for professionals in the creative industry to share portfolios and collaborate on projects.',
-      skills: ['Next.js', 'GraphQL', 'PostgreSQL']
-    },
-    { 
-      id: 5, 
-      title: 'PROJECT 05', 
-      link: 'https://github.com/project-5',
-      description: 'Automated workflow management tool that integrates with various third-party APIs to streamline agency operations.',
-      skills: ['Vue.js', 'Firebase', 'MongoDB']
-    },
   ];
 
   const engineeringStack = [
     {
       category: 'Backend & Distributed Systems',
       icon: '⚙️',
-      tags: ['Golang', 'gRPC', 'NATS JetStream', 'PostgreSQL', 'Redis', 'GraphQL', 'REST APIs', 'WebSockets'],
+      tags: ['Golang', 'gRPC', 'NATS JetStream', 'PostgreSQL', 'Redis', 'GraphQL', 'REST APIs', 'WebSockets', 'MySQL'],
     },
     {
       category: 'Frontend & Application Layer',
@@ -57,12 +43,12 @@ export default function Home() {
     {
       category: 'AI & Automation',
       icon: '🤖',
-      tags: ['Gemini API', 'AI Workflows', 'Multi-Agent Systems', 'Semantic Processing', 'Automation Pipelines'],
+      tags: ['Gemini API', 'Antropic API', 'AI Workflows', 'Multi-Agent Systems', 'Semantic Processing', 'Automation Pipelines'],
     },
     {
       category: 'Infrastructure & DevOps',
       icon: '☁️',
-      tags: ['Docker', 'AWS', 'Kong API Gateway', 'CI/CD', 'Distributed Systems', 'Real-Time Architectures'],
+      tags: ['Docker', 'AWS', 'Nginx', 'Kong API Gateway', 'CI/CD', 'Distributed Systems', 'Real-Time Architectures'],
     },
   ];
 
@@ -82,8 +68,8 @@ export default function Home() {
         </div>
         <div className="w-full md:w-1/2 h-[50vh] md:h-screen order-1 md:order-2 relative">
           <img 
-            src="/images/headshot-main.png" 
-            alt="Jane Doe Developer" 
+            src="/images/srishti-headshot.jpg" 
+            alt="Srishti" 
             className="w-full h-full object-cover object-center absolute inset-0"
           />
         </div>
