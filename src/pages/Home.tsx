@@ -22,6 +22,13 @@ export default function Home() {
     },
     { 
       id: 3, 
+      title: 'Claude Skills', 
+      link: 'https://github.com/shristi2211/Claude_Skills',
+      description: 'Specialized instruction sets and automated workflows designed to enhance Claude\'s capabilities for specific tasks. Implemented completely in Shell scripting to provide robust, reproducible, and efficient AI-driven operations.',
+      skills: ['Shell', 'Claude', 'AI Workflows', 'Automation']
+    },
+    {
+      id: 4,
       title: 'AI Control Plane', 
       link: 'https://github.com/project-3',
       description: 'An enterprise-grade AI orchestration infrastructure designed to manage multi-agent ecosystems, validate AI outputs, orchestrate intelligent workflows, and bridge legacy enterprise systems with modern AI environments.',
