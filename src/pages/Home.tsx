@@ -213,12 +213,12 @@ export default function Home() {
       </section>
 
       {/* Engineering Stack Section */}
-      <section className="w-full relative py-32 bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url("/images/workspace-bg.png")' }}>
+      <section className="w-full relative py-16 bg-fixed bg-cover bg-center" style={{ backgroundImage: 'url("/images/workspace-bg.png")' }}>
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-8">
           {/* Section Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <span className="inline-block text-brand-green text-xs font-semibold tracking-[0.3em] uppercase mb-4">
               Full Stack · Distributed Systems · AI Infrastructure
             </span>
@@ -229,7 +229,7 @@ export default function Home() {
           </div>
 
           {/* Category Cards */}
-          <div className="space-y-10">
+          <div className="space-y-6">
             {engineeringStack.map((group, idx) => (
               <div key={idx} className="group">
                 {/* Category Label */}
