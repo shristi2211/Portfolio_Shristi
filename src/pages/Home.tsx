@@ -57,6 +57,16 @@ export default function Home() {
       icon: '☁️',
       tags: ['Docker', 'AWS', 'Nginx', 'Kong API Gateway', 'CI/CD', 'Distributed Systems', 'Real-Time Architectures'],
     },
+    {
+      category: 'DevOps & Platform Engineering',
+      icon: '🚀',
+      tags: ['CI/CD automation using Jenkins', 'Containerized deployments using Docker', 'Infrastructure troubleshooting and deployment automation', 'Production environment management and monitoring'],
+    },
+    {
+      category: 'Infrastructure & Networking',
+      icon: '🌐',
+      tags: ['Proxmox Virtualization', 'OPNsense Firewall & Routing', 'WireGuard VPN', 'Dual WAN Failover Architecture', 'Network Segmentation & Security Policies', 'VM Provisioning & Access Management'],
+    },
   ];
 
   return (
