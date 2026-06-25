@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         
         {/* Horizontally Scrolling Container */}
-        <div className="w-full overflow-x-auto snap-x snap-mandatory flex gap-6 px-8 md:px-12 lg:px-24 pb-8 no-scrollbar scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="w-full overflow-x-auto snap-x snap-mandatory flex justify-start lg:justify-center gap-6 px-8 md:px-12 lg:px-24 pb-8 no-scrollbar scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {latestWork.map((project) => {
             const isExpanded = expandedProject === project.id;
             
@@ -119,7 +119,7 @@ export default function Home() {
 
                     {/* Project Title */}
                     <div className="relative z-10 flex-1 flex items-center justify-center">
-                      <h3 className={`font-bold tracking-[0.25em] text-brand-green text-base md:text-lg uppercase transition-all duration-500 ease-out
+                      <h3 className={`font-bold tracking-[0.25em] text-brand-green text-base md:text-lg uppercase text-center px-4 transition-all duration-500 ease-out
                         ${activeProject === project.id ? '-translate-y-4 scale-105' : 'translate-y-0 scale-100'}
                       `}>
                         {project.title}
@@ -146,7 +146,7 @@ export default function Home() {
                 {/* Expanded State Header */}
                 {isExpanded && (
                   <div className="relative w-full flex-shrink-0 h-32 bg-gradient-to-b from-gray-800 via-gray-900 to-black flex items-center justify-center">
-                    <h3 className="text-white font-bold tracking-[0.25em] text-xl uppercase">
+                    <h3 className="text-white font-bold tracking-[0.25em] text-xl uppercase text-center px-8">
                       {project.title}
                     </h3>
                     <button 
