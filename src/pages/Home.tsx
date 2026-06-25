@@ -53,19 +53,14 @@ export default function Home() {
       tags: ['Gemini API', 'Antropic API', 'AI Workflows', 'Multi-Agent Systems', 'Semantic Processing', 'Automation Pipelines'],
     },
     {
-      category: 'Infrastructure & DevOps',
+      category: 'DevOps & Cloud Platform',
       icon: '☁️',
-      tags: ['Docker', 'AWS', 'Nginx', 'Kong API Gateway', 'CI/CD', 'Distributed Systems', 'Real-Time Architectures'],
+      tags: ['AWS', 'Docker Containers', 'Jenkins CI/CD', 'Nginx', 'Kong API Gateway', 'Production Monitoring', 'Deployment Automation'],
     },
     {
-      category: 'DevOps & Platform Engineering',
-      icon: '🚀',
-      tags: ['CI/CD automation using Jenkins', 'Containerized deployments using Docker', 'Infrastructure troubleshooting and deployment automation', 'Production environment management and monitoring'],
-    },
-    {
-      category: 'Infrastructure & Networking',
+      category: 'Networking & Virtualization',
       icon: '🌐',
-      tags: ['Proxmox Virtualization', 'OPNsense Firewall & Routing', 'WireGuard VPN', 'Dual WAN Failover Architecture', 'Network Segmentation & Security Policies', 'VM Provisioning & Access Management'],
+      tags: ['Proxmox Virtualization', 'OPNsense Firewall', 'WireGuard VPN', 'Dual WAN Failover', 'Network Segmentation', 'VM Provisioning'],
     },
   ];
 
